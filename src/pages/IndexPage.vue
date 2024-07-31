@@ -53,12 +53,14 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    const name = ref(null)
+    const name = ref("ภีรภัทร์")
+    const surname = ref("ขอดแก้ว")
     const age = ref(null)
     const accept = ref(false)
 
     return {
       name,
+      surname,
       age,
       accept,
 
