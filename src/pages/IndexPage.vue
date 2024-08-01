@@ -65,7 +65,6 @@
 </template>
 
 <script>
-import { cosh } from 'core-js/core/number';
 import { useQuasar } from 'quasar'
 import { ref } from 'vue'
 
