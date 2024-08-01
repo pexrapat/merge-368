@@ -13,6 +13,7 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Enter Your ID Code']"
       />
+      <!--name-->
       <q-input
         filled
         v-model="name"
@@ -21,6 +22,7 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type Yourname']"
       />
+      <!--surname-->
       <q-input
         filled
         v-model="surname"
@@ -29,6 +31,16 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type Surname']"
       />
+      <!--language-->
+      <q-input
+        filled
+        v-model="language"
+        label="ภาษา *"
+        hint=" ภาษา "
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'กรุณาใส่ภาษา']"
+      />
+      <!--age-->
       <q-input
         filled
         type="number"
@@ -59,10 +71,11 @@ import { ref } from 'vue'
 export default {
   setup () {
     const $q = useQuasar()
-
+    
     const id = ref("6604101368")
     const name = ref("ภีรภัทร์")
     const surname = ref("ขอดแก้ว")
+    const language = ref("ภาษาไทย")
     const age = ref('20')
     const accept = ref(false)
 
@@ -70,6 +83,7 @@ export default {
       id,
       name,
       surname,
+      language,
       age,
       accept,
 
@@ -98,6 +112,7 @@ export default {
         surname.value = null
         age.value = null
         accept.value = false
+        language.value = null
       }
     }
   }
